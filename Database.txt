@@ -1,0 +1,146 @@
+Database name: - ecom_db
+
+
+===================================== Table 1 : - Categories ======================================
+
+CREATE TABLE categories(
+    cat_id int(11) not null AUTO_INCREMENT PRIMARY KEY,
+    cat_title varchar(256) not null
+);
+
+INSERT INTO categories(cat_title) VALUES('Electronics')
+
+INSERT INTO categories(cat_title) VALUES('Clothes')
+
+
+===================================================================================================
+
+
+===================================== Table 2 : - Products ======================================
+
+CREATE TABLE products( 
+    product_id int(11) not null AUTO_INCREMENT PRIMARY KEY, 
+    product_title varchar(256) not null, product_category_title varchar(256) not null /*link with category table - cat_title*/, 
+    product_price float(11) not null /*price is in decimals*/, 
+    product_quantity float(11) not null,  /* For Cart System*/ /* Change product quality for testing purposes */ 
+    product_description TEXT not null, 
+    product_short_description TEXT not null, 
+    product_image varchar(256) not null, 
+    product_reviews int(11) not null, /*user comments*/
+    product_keywords varchar(256) not null 
+);
+
+
+===================================================================================================
+
+
+===================================== Table 3 : - Users ======================================
+
+CREATE TABLE users(
+    user_id int(11) not null PRIMARY KEY AUTO_INCREMENT,
+    username varchar(256) not null UNIQUE,
+    user_email varchar(256) not null UNIQUE,
+    user_password TEXT not null,
+    customer_name TEXT not null,
+    user_image TEXT not null,
+    user_role varchar(256) not null,
+    token Text not null   /*for forgotten password system*/
+);
+
+INSERT INTO `users` (`user_id`, `username`, `user_email`, `user_password`, `user_image`, `user_role`) VALUES (NULL, 'Fida', 'skyabyss@gmail.com', 'fida123', '', 'Admin');
+
+UPDATE `users` SET `user_image` = 'http://placehold.it/400x200' WHERE `users`.`user_id` = 1;
+
+INSERT INTO `users` (`user_id`, `username`, `user_email`, `user_password`, `user_image`, `user_role`) VALUES (NULL, 'Jishan', 'jis@hotmail.com', 'jishan123', 'http://placehold.it/400x200', 'Customer');
+
+
+===================================================================================================
+
+
+
+===================================== Table 4 : - Orders ======================================
+
+CREATE TABLE `orders` (
+  `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `phone` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `amount` double DEFAULT NULL,
+  `address` text COLLATE utf8_unicode_ci,
+  `city` text COLLATE utf8_unicode_ci,
+  `status` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `transaction_id` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `currency` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `zip_code` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `total_items` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+===================================================================================================
+
+
+
+===================================== Table 5 : - Receipt ======================================
+
+CREATE TABLE `receipt` (
+  `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `receipt_number` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `transaction_id` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `transaction_date` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `card_type` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `bank_transaction_id` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `currency` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `vat` double DEFAULT NULL,
+  `amount` double DEFAULT NULL,
+  `total_items` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+===================================================================================================
+
+
+
+
+===================================== Table 6 : - Product Report ======================================
+
+CREATE TABLE product_report(
+    report_id int(11) not null PRIMARY KEY AUTO_INCREMENT,
+    product_id int(11) not null,
+    product_title varchar(256) not null,
+    product_price double not null,
+    product_quantiy int(11) not null,
+    receipt_number TEXT not null,
+    transaction_id TEXT not null,
+    order_date TEXT not null
+);
+
+
+===================================================================================================
+
+
+
+===================================== Table 7 : - Slides (Dynamic Slides) ======================================
+
+CREATE TABLE slides(
+    slide_id int(11) not null PRIMARY KEY AUTO_INCREMENT,
+    slide_title varchar(255) not null,
+    slide_image TEXT not null
+);
+
+INSERT INTO `slides` (slide_title`, `slide_image`) VALUES ('Test 1', 'image_1.jpg'), ('Test 2', 'image_3.jpg');
+
+===================================================================================================
+
+
+
+===================================== Table 8 : - Comments ======================================
+
+CREATE TABLE comments(
+    comment_id int(11) PRIMARY KEY AUTO_INCREMENT not null,
+    comment_product_id int(11) not null, /* To match with product_id in products table */
+    comment_product_title varchar(256) not null, /* To match with product_title in products table */
+    comment_author varchar(256) not null,
+    comment_email varchar(256) not null,
+    comment_content varchar(256) not null,
+    comment_date TEXT not null
+);
+
+===================================================================================================
