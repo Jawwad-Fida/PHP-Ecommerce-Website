@@ -83,7 +83,12 @@ PHP dotenv was created by [Vance Lucas](https://github.com/vlucas) and [Graham C
 
 ## Screenshots
 
-![1]<img src="https://user-images.githubusercontent.com/64092765/107878898-db4e7500-6eff-11eb-83c4-29bed4b7fe7e.png" width="200px">
-![2](https://user-images.githubusercontent.com/64092765/107878942-22d50100-6f00-11eb-9263-62ea1e41f056.png)
-![3](https://user-images.githubusercontent.com/64092765/107878961-4c8e2800-6f00-11eb-9de4-121cc3532ddc.png)
-    
+<img src="https://user-images.githubusercontent.com/64092765/107878898-db4e7500-6eff-11eb-83c4-29bed4b7fe7e.png" width="75%">
+<img src="https://user-images.githubusercontent.com/64092765/107878942-22d50100-6f00-11eb-9263-62ea1e41f056.png" width="75%">
+<img src="https://user-images.githubusercontent.com/64092765/107878961-4c8e2800-6f00-11eb-9de4-121cc3532ddc.png" width="75%">
+<img src="https://user-images.githubusercontent.com/64092765/107879395-bf000780-6f02-11eb-8315-a7c7e7ffbc88.png" width="75%">
+<img src="https://user-images.githubusercontent.com/64092765/107879402-c3c4bb80-6f02-11eb-81e2-f3eb0d9f5e0a.png" width="75%">
+<img src="https://user-images.githubusercontent.com/64092765/107879405-c6271580-6f02-11eb-8313-8a4b5228b154.png" width="75%">
+<img src="https://user-images.githubusercontent.com/64092765/107879407-c7f0d900-6f02-11eb-9038-7f4a35491e9c.png" width="75%">
+<img src="https://user-images.githubusercontent.com/64092765/107879410-ca533300-6f02-11eb-8dd6-8ce04e463e46.png" width="75%">
+<img src="https://user-images.githubusercontent.com/64092765/107879412-cc1cf680-6f02-11eb-8335-4c0c592f9e8e.png" width="75%">
