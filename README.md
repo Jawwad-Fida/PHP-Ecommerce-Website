@@ -50,16 +50,11 @@
       6)Slides and Thumbnails
 
 
-
-### Screenshots
-    
-
-
 ### API's and Composer packages: -
       phpmailer package and mailtrap API - smtp fake testing server
       PHP dotenv package - protecting credentials online (creating .env file)
       
-
+      
 ## Credits
 
 ### 1) Boostrap template from [Start Boostrap](https://startbootstrap.com/) used - for home page, shop page and admin panel 
@@ -85,3 +80,10 @@ PHP dotenv was created by [Vance Lucas](https://github.com/vlucas) and [Graham C
 ### 5) [SSLCOMMERZ](https://www.sslcommerz.com/) payment gateway. Click here for [Github](https://github.com/sslcommerz) profile
 
 ### 6) Images taken from [Unsplash](https://unsplash.com/)
+
+## Screenshots
+
+![1]<img src="https://user-images.githubusercontent.com/64092765/107878898-db4e7500-6eff-11eb-83c4-29bed4b7fe7e.png" width="200px">
+![2](https://user-images.githubusercontent.com/64092765/107878942-22d50100-6f00-11eb-9263-62ea1e41f056.png)
+![3](https://user-images.githubusercontent.com/64092765/107878961-4c8e2800-6f00-11eb-9de4-121cc3532ddc.png)
+    
